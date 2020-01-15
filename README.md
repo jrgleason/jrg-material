@@ -125,5 +125,5 @@ This is extremely useful for Dynamic Template support.
 
 ## More Information
 
-For more information see the [Demo Project](./packages/demo) and to contact me check out [my site](https://jackiergleson.com).
+For more information see the [Demo Project](./packages/demo) and to contact me check out [my site](https://jackiergleason.com).
 
