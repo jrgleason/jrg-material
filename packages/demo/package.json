@@ -1,0 +1,23 @@
+{
+  "name": "jrg-component-example",
+  "version": "0.0.0",
+  "description": "",
+  "cjs": "dist/index.cjs",
+  "browser": "dist/index.umd.js",
+  "main": "dist/index.mjs",
+  "scripts": {
+    "start": "node --experimental-modules src/server.mjs"
+  },
+  "author": "Jackie Gleason",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "@jrg-material/button": "latest",
+    "@jrg-material/core": "latest",
+    "koa": "latest",
+    "koa-mount": "latest",
+    "koa-pug": "latest",
+    "koa-router": "latest",
+    "koa-static": "latest",
+    "pug": "latest"
+  }
+}

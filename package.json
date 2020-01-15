@@ -1,0 +1,30 @@
+{
+  "name": "jrg-material",
+  "version": "0.0.0",
+  "description": "Web Component Based UI framework",
+  "scripts": {
+    "build": "lerna run build",
+    "clean": "lerna run clean",
+    "bootstrap": "lerna bootstrap"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrgleason/jrg-material.git"
+  },
+  "author": "Jackie Gleason",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jrgleason/jrg-material/issues"
+  },
+  "homepage": "https://github.com/jrgleason/jrg-material#readme",
+  "devDependencies": {
+    "@jrg-material/build": "latest",
+    "jsdoc": "latest",
+    "jsdoc-md": "latest",
+    "lerna": "latest",
+    "rollup": "latest",
+    "@rollup/plugin-node-resolve": "latest",
+    "@rollup/plugin-commonjs": "latest",
+    "rollup-plugin-string": "latest"
+  }
+}

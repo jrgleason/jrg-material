@@ -1,0 +1,61 @@
+html, body, .content{
+  margin: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+.content{
+  display: flex;
+}
+jrg-viewport.left{
+  width: 200px;
+}
+jrg-viewport.right{
+  flex:1;
+  overflow: auto;
+}
+jrg-header{
+  color: lightsgrey;
+}
+.jrg-splash-header, .logo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.jrg-splash, .jrg-other{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.jrg-splash{
+  background-color: red;
+  color: lightgrey;
+}
+.header-area{
+  font-size: 2em;
+  color: white;
+  font-weight: 500;
+  overflow: hidden;
+  white-space: nowrap;
+}
+.jrg-other{
+  background-color: black;
+}
+.biography{
+    background-color: black;
+    width: 100%;
+    min-height: 100%;
+}
+@media only screen and (max-width: 800px) {
+   .logo img{
+       width: 80%;
+   }
+}
+.padded{
+   padding: 20px;
+}
+.jrg-other{
+  color: white;
+}

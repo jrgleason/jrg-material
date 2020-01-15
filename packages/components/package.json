@@ -1,0 +1,25 @@
+{
+  "name": "jrg-material-components",
+  "version": "0.0.0",
+  "description": "This is for my personal web components",
+  "main": "src/index.mjs",
+  "scripts": {
+    "build": "lerna run build",
+    "bootstrap": "lerna bootstrap",
+    "clean": "lerna clean -y || lerna run clean",
+    "publish:patch": "lerna run publish:patch",
+    "lint": "lerna run lint"
+  },
+  "author": "Jackie Gleason",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@jrg-material/build": "latest",
+    "jsdoc": "latest",
+    "jsdoc-md": "latest",
+    "lerna": "latest",
+    "rollup": "latest",
+    "@rollup/plugin-node-resolve": "latest",
+    "@rollup/plugin-commonjs": "latest",
+    "rollup-plugin-string": "latest"
+  }
+}

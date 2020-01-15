@@ -1,0 +1,14 @@
+html
+  head
+    link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+    link(rel="stylesheet", href="/css/theme.css")
+  body
+    .content
+      jrg-button(base-color="grey")
+        div(slot="jrg-button-label") Welcome
+      block body
+    block scripts
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.1.0/mustache.js")
+        script(type="module" src="https://cdn.jsdelivr.net/npm/xstate@4.7.6/dist/xstate.web.js")
+        script(type="module" src="/jrg/core/dist/index.mjs")
+        script(type="module" src="/jrg/button/dist/index.mjs")
