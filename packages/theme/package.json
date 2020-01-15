@@ -1,0 +1,11 @@
+{
+  "name": "@jrg-material/theme",
+  "version": "0.0.2",
+  "description": "My common CSS files",
+  "scripts": {
+    "publish:patch": "npm publish --access public && npm version patch",
+    "upload": "npm run publish:patch"
+  },
+  "author": "",
+  "license": "ISC"
+}

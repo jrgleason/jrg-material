@@ -1,0 +1,17 @@
+{
+  "name": "@jrg-material/build",
+  "version": "0.0.4",
+  "description": "",
+  "main": "dist/index.mjs",
+  "src": "src/index.mjs",
+  "scripts": {
+    "build": "rollup -c rollup.config.mjs",
+    "run-doc": "jsdoc --debug ./src/jrg-base-element.mjs -c ./jsdoc.conf.json",
+    "clean": "rm -rf dist",
+    "lint": "eslint src --fix --ext mjs",
+    "publish:patch": "npm run build && npm publish --access public && npm version patch",
+    "upload": "npm publish --access public && npm version patch"
+  },
+  "author": "Jackie Gleason",
+  "license": "Apache-2.0"
+}
