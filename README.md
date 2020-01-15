@@ -51,8 +51,7 @@ We should now see the button appear.
 
 Create a new project then install the base component (or the component you wish to extend) like this...
 
-    npm install --save @jrg/base 
-    npm install -D @jrg/build rollup rollup-plugin-commonjs rollup-plugin-node-resolve rollup-plugin-string 
+    npm install -D @jrg-material/build rollup rollup-plugin-commonjs rollup-plugin-node-resolve rollup-plugin-string 
 
 Next create the component structure like this...
 
@@ -66,7 +65,6 @@ Next create the component structure like this...
       
 Now in `index.mjs` we can create our web component...
 
-    import {Base} from '@jrg/base';
 
     import template from './template.html';
     import style from './style.css';
