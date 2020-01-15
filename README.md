@@ -1,4 +1,5 @@
-![under construction](https://gph.is/2cYGIbA)
+![under construction](https://media.giphy.com/media/1XgIXQEzBu6ZWappVu/giphy.gif)
+
 # JRG Material
 
 This project is designed to create an extensible web component framework with 4 main goals...
