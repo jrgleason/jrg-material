@@ -4,10 +4,10 @@
 
 This project is designed to create an extensible web component framework with 4 main goals...
 
-1. Create a component pattern that doesn't use a platform (Angular, React or Vue) agnostic. 
+1. Create a component pattern that doesn't use a stateful platform (Angular, React or Vue). 
 1. Provide versions of the application for all module loaders (CJS, ECMA, UMD).
-1. Use the concept of convention over configuration and ensure as much as possible is ECMA Javascript, CSS3 and standard HTML.
-1. Avoid use of _heavy_ (IMHO) Javascript compilation libraries like Webpack and Babel, in favor of Rollup.
+1. Use the concept of convention over configuration and ensure ECMA Javascript, CSS3 and HTML standards.
+1. Avoid use of _heavy_ (IMHO) Javascript compilation libraries like Webpack and Babel, in favor of Rollup (and eventually nothing).
 
 ## Current Components
 
