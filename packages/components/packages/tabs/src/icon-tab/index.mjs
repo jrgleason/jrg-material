@@ -1,7 +1,8 @@
 import {Tab} from "../tab/index.mjs";
-// Shouldn't import otherwise the dependency is brought in
-// import {Icon} from "@jrg-material/icon";
 
+/**
+* This is a Icon Tab
+*/
 export class IconTab extends Tab{
     constructor(name, icon){
         super(name);

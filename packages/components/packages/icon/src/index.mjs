@@ -1,6 +1,11 @@
 import template from './template.html';
 import style from './style.css';
 
+/**
+* This is a simple icon
+* @example
+* <jrg-icon icon="search"></jrg-icon>
+*/
 export class Icon extends Base {
     constructor(icon) {
         super();
@@ -27,5 +32,7 @@ export class Icon extends Base {
         super.connectedCallback();
     }
 }
+
+
 customElements.get('jrg-icon') ||
   customElements.define('jrg-icon', Icon, {});

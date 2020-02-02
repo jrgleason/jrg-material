@@ -1,0 +1,13 @@
+{
+  "title": "JRG-Material",
+  "opts": {
+    "destination": "./docs/",
+    "recurse": true
+  },
+  "source": {
+    "includePattern": ".+\\.(m|c)?js(doc|x)?$",
+    "excludePattern": "(node_modules|docs|dist|out|button)"
+  },
+  "sourceType": "module"
+}
+

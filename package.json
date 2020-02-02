@@ -5,7 +5,8 @@
   "scripts": {
     "build": "lerna run build",
     "clean": "lerna run clean",
-    "bootstrap": "lerna bootstrap"
+    "bootstrap": "lerna bootstrap",
+    "generate:docs": "jsdoc -r . -c ./conf/jsdoc.conf.json"
   },
   "repository": {
     "type": "git",
@@ -19,12 +20,12 @@
   "homepage": "https://github.com/jrgleason/jrg-material#readme",
   "devDependencies": {
     "@jrg-material/build": "latest",
+    "@rollup/plugin-commonjs": "latest",
+    "@rollup/plugin-node-resolve": "latest",
     "jsdoc": "latest",
     "jsdoc-md": "latest",
     "lerna": "latest",
     "rollup": "latest",
-    "@rollup/plugin-node-resolve": "latest",
-    "@rollup/plugin-commonjs": "latest",
     "rollup-plugin-string": "latest"
   }
 }

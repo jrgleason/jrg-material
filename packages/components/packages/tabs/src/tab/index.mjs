@@ -7,6 +7,17 @@ if(!Base){
     console.error(`Base not found please load core project`);
 }
 
+
+/**
+* This is a Slot Based generic Tab
+* @example
+* <jrg-tab slot="jrg-tabs-item" name="tab1">
+*   <jrg-icon slot="jrg-tab-content" icon="menu"></jrg-icon>
+*   <div slot="jrg-tab-content">Ok</div>
+* </jrg-tab>
+* @example
+* const element = new Tab("tab1");
+*/
 export class Tab extends Base {
   constructor(name) {
     super();
