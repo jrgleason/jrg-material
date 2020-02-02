@@ -1,48 +1,61 @@
 :host *{
-  font-size: 0.9em;
+    font-size: 0.9em;
 }
 button{
-  border:none;
-  background: none;
-  position:relative;
-  outline: none;
-  padding: 0;
-  height: {{height}};
-  border: 1px solid {{baseColor}};
-  border-radius: 4px;
-  cursor: pointer;
-}
-button:hover .jrg-button-background{
-  opacity: 0.5;
-}
-.jrg-button-background{
-  height: 100%;
-  width: 100%;
-  z-index: 0;
-  position: absolute;
-  top: 0;
-  background-color: {{baseColor}};
-  opacity: 0.1;
-  {{#inverted}}
-  opacity: 1;
-  {{/inverted}}
+    background: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
 }
 
-::slotted(div[slot="jrg-button-label"]){
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 5px 15px;
-  font-weight: 500;
+button:hover .jrg-button-background{
+    opacity: 0.5;
 }
-.jrg-button-label > * {
-  color: {{baseColor}};
-  {{#inverted}}
+
+.jrg-button-background{
+    height: 100%;
+    width: 100%;
+    z-index: 0;
+    position: absolute;
+    top: 0;
+    background-color: {{baseColor}};
+    opacity: 0.1;
+}
+
+::slotted(*[slot="jrg-button-label"]){
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px 15px;
+    font-weight: 500;
+    color: {{baseColor}};
+    z-index: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+::slotted(*[slot="jrg-button-icon"]){
+    margin: 5px 15px;
+    margin-right: 0;
+}
+::slotted(*){
+    font-weight: 500;
+}
+
+slot{
+    display:flex;
+}
+
+{{#outlined}}
+button{
+    border: 1px solid {{baseColor}};
+    border-radius: 4px;
+}
+{{/outlined}}
+{{#contained}}
+.jrg-button-background{
+  opacity: 1;
+}
+::slotted(*[slot="jrg-button-label"]){
   color: white;
-  {{/inverted}}
 }
-.jrg-button-label-content{
-  z-index: 1;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
+{{/contained}}

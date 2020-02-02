@@ -1,15 +1,13 @@
 {
-  "name": "@jrg-material/button",
-  "version": "0.0.16",
-  "description": "",
+  "name": "@jrg-material/icon",
+  "version": "0.0.9",
   "browser": "dist/index.umd.js",
   "main": "dist/index.mjs",
   "src": "src/index.mjs",
   "scripts": {
     "lint": "eslint src --fix --ext mjs",
     "clean": "rm -rf dist",
-    "build": "npm install && rollup -c rollup.config.mjs && npm prune --production",
-    "build:local": "../../node_modules/.bin/rollup -c",
+    "build": "npm install && rollup -c && npm prune --production",
     "publish:patch": "npm run build && npm publish --access public && npm version patch",
     "upload": "npm publish --access public && npm version patch"
   },

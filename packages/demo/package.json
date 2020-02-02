@@ -13,6 +13,9 @@
   "dependencies": {
     "@jrg-material/button": "latest",
     "@jrg-material/core": "latest",
+    "@jrg-material/icon": "latest",
+    "@jrg-material/tabs": "latest",
+    "@xstate/fsm": "latest",
     "koa": "latest",
     "koa-mount": "latest",
     "koa-pug": "latest",

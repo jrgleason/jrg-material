@@ -1,12 +1,13 @@
-![under construction](https://gph.is/2cYGIbA)
+![under construction](https://media.giphy.com/media/1XgIXQEzBu6ZWappVu/giphy.gif)
+
 # JRG Material
 
 This project is designed to create an extensible web component framework with 4 main goals...
 
-1. Create a component pattern that doesn't is platform (Angular, React or Vue) agnostic. 
+1. Create a component pattern that doesn't use a stateful platform (Angular, React or Vue). 
 1. Provide versions of the application for all module loaders (CJS, ECMA, UMD).
-1. Use the concept of convention over configuration and ensure as much as possible is ECMA Javascript, CSS3 and standard HTML.
-1. Avoid use of _heavy_ (IMHO) Javascript compilation libraries like Webpack and Babel, in favor of Rollup.
+1. Use the concept of convention over configuration and ensure ECMA Javascript, CSS3 and HTML standards.
+1. Avoid use of _heavy_ (IMHO) Javascript compilation libraries like Webpack and Babel, in favor of Rollup (and eventually nothing).
 
 ## Current Components
 
@@ -14,22 +15,31 @@ These are the current Components, there will be more to come...
 
 1. [Core](./packages/core): This is the basic shadow dom element
 1. [Theme](./packages/theme): CSS that can be included on all components
+1. [Tabs](./packages/components/packages/tabs/README.md): Material based tabbing
 1. [Button](./packages/components/packages/button): Simple Button (In progress)
 1. [Icon](./packages/components/packages/icon): Inclusion of Material Icons (In progress) 
 1. [Icon Button](./packages/components/packages/icon-button): (In progress)
 
-## Getting started
+## We Need Help!!!!
+
+Since this is a new project we are looking for people to help implement components, add testing, reviewing/creating docs, etc. Feel free to submit PRs!
+
+## Getting started <a name="gettingStarted"></a>
 
 ### Using a component
 
 For this example we will be using the button component. First install the component as follows...
 
-    npm install --save @jrg-material/button
+    npm install --save @jrg-material/core @jrg-material/button
     
 Make sure to include MustacheJS for templating and XState for state management (coming soon).
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/<version>/mustache.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/xstate@<version>/dist/xstate.web.js"></script>
+
+Now we need to attach the core library
+
+    <script type="module" src="/jrg/core/dist/index.mjs" />
     
 Next we need to include the component JS file into our project. I typically do this like...
 
@@ -50,8 +60,7 @@ We should now see the button appear.
 
 Create a new project then install the base component (or the component you wish to extend) like this...
 
-    npm install --save @jrg/base 
-    npm install -D @jrg/build rollup rollup-plugin-commonjs rollup-plugin-node-resolve rollup-plugin-string 
+    npm install -D @jrg-material/build rollup rollup-plugin-commonjs rollup-plugin-node-resolve rollup-plugin-string 
 
 Next create the component structure like this...
 
@@ -65,7 +74,6 @@ Next create the component structure like this...
       
 Now in `index.mjs` we can create our web component...
 
-    import {Base} from '@jrg/base';
 
     import template from './template.html';
     import style from './style.css';
@@ -126,5 +134,5 @@ This is extremely useful for Dynamic Template support.
 
 ## More Information
 
-For more information see the [Demo Project](./packages/demo) and to contact me check out [my site](https://jackiergleson.com).
+For more information see the [Demo Project](./packages/demo) and to contact me check out [my site](https://jackiergleason.com).
 

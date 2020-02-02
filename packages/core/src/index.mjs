@@ -25,7 +25,7 @@ export class Base extends HTMLElement {
 
   get template(){
     const element = document.createElement('template');
-    element.innerHTML = Mustache.render(this.html);
+    element.innerHTML = Mustache.render(this.html, this);
     return element.content.cloneNode(true);
   }
 

@@ -1,6 +1,6 @@
 {
-  "name": "@jrg-material/button",
-  "version": "0.0.16",
+  "name": "@jrg-material/tabs",
+  "version": "0.0.51",
   "description": "",
   "browser": "dist/index.umd.js",
   "main": "dist/index.mjs",
@@ -13,9 +13,9 @@
     "publish:patch": "npm run build && npm publish --access public && npm version patch",
     "upload": "npm publish --access public && npm version patch"
   },
-  "author": "",
-  "license": "MIT",
   "dependencies": {
     "@jrg-material/theme": "latest"
-  }
+  },
+  "author": "",
+  "license": "MIT"
 }
