@@ -15,13 +15,36 @@ export class Button extends Base {
     this.addStyle(font, 'font');
     this.addStyle(effects, 'effects');
     this.addStyle(style);
-  }
-  connectedCallback() {
     this.height = this.getAttribute('height') || '36px';
     this.baseColor = this.getAttribute('base-color') || 'rgba(144, 202, 249, 0.5)';
-    this.inverted = !!this.getAttribute('inverted');
+    this.contained = !!this.getAttribute('contained');
+    this.border = this.getAttribute('border') === 'false'? false : true;
+  }
+
+  static get observedAttributes() { return ['height']; }
+
+  get outlined(){
+    return !this.contained && this.border;
+  }
+
+  attributeChangedCallback(name, oldValue, newValue) {
+    if(name === 'height'){
+      changeHeight(newValue)
+    }
+  }
+
+  changeHeight(height){
+    this.shadowRoot
+        .childNodes
+        .forEach((element)=>{
+            element.style.height = height;
+        })
+  }
+
+  connectedCallback() {
     super.connectedCallback();
+    this.changeHeight(this.height);
   }
 }
 
-customElements.define('jrg-button', Button, {});
+Base.CREATE_ELEMENT('jrg-button', Button, {});

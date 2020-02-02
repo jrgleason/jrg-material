@@ -1,6 +1,6 @@
 {
   "name": "@jrg-material/core",
-  "version": "0.0.4",
+  "version": "0.0.6",
   "description": "",
   "main": "dist/index.mjs",
   "src": "src/index.mjs",
@@ -13,5 +13,5 @@
     "upload": "npm publish --access public && npm version patch"
   },
   "author": "Jackie Gleason",
-  "license": "Apache-2.0"
+  "license": "MIT"
 }

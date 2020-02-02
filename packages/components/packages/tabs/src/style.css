@@ -1,0 +1,18 @@
+.jrg-tabs{
+    display:    flex;
+    overflow:   hidden;
+    min-height: 48px;
+}
+.jrg-tabs-scroll{
+    flex: 1 1 auto;
+    display: inline-block;
+    position: relative;
+    white-space: nowrap;
+}
+.jrg-tabs-scroll.fixed{
+    width:      100%;
+    overflow:   hidden;
+}
+.jrg-tabs-flex{
+    display:flex;
+}

@@ -15,22 +15,31 @@ These are the current Components, there will be more to come...
 
 1. [Core](./packages/core): This is the basic shadow dom element
 1. [Theme](./packages/theme): CSS that can be included on all components
+1. [Tabs](./packages/components/packages/tabs/README.md): Material based tabbing
 1. [Button](./packages/components/packages/button): Simple Button (In progress)
 1. [Icon](./packages/components/packages/icon): Inclusion of Material Icons (In progress) 
 1. [Icon Button](./packages/components/packages/icon-button): (In progress)
 
-## Getting started
+## We Need Help!!!!
+
+Since this is a new project we are looking for people to help implement components, add testing, reviewing/creating docs, etc. Feel free to submit PRs!
+
+## Getting started <a name="gettingStarted"></a>
 
 ### Using a component
 
 For this example we will be using the button component. First install the component as follows...
 
-    npm install --save @jrg-material/button
+    npm install --save @jrg-material/core @jrg-material/button
     
 Make sure to include MustacheJS for templating and XState for state management (coming soon).
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/<version>/mustache.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/xstate@<version>/dist/xstate.web.js"></script>
+
+Now we need to attach the core library
+
+    <script type="module" src="/jrg/core/dist/index.mjs" />
     
 Next we need to include the component JS file into our project. I typically do this like...
 

@@ -1,14 +1,31 @@
 html
-  head
-    link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
-    link(rel="stylesheet", href="/css/theme.css")
-  body
-    .content
-      jrg-button(base-color="grey")
-        div(slot="jrg-button-label") Welcome
-      block body
-    block scripts
+    head
+        link(rel="stylesheet", href="https://fonts.googleapis.com/icon?family=Material+Icons")
+        link(rel="stylesheet", href="/css/theme.css")
+    body
+        .content
+            jrg-button(base-color="purple")
+                div(slot="jrg-button-label") Welcome
+            jrg-icon(icon="add")
+            jrg-button(base-color="green")
+                jrg-icon(icon="menu" slot="jrg-button-icon")
+                div(slot="jrg-button-label") This is a icon button
+            jrg-button(base-color="red" contained="true")
+                div(slot="jrg-button-label") contained
+            jrg-button(base-color="green" border="false")
+                div(slot="jrg-button-label") text
+            jrg-tabs(id="jrg-navigation-tabs")
+            jrg-tabs
+                jrg-tab(slot="jrg-tabs-item" onclick="App.onNavigation(this)" name="tab1")
+                    jrg-icon(slot="jrg-tab-content" icon="menu")
+                    div(slot="jrg-tab-content") Ok
+                jrg-tab(slot="jrg-tabs-item" onclick="App.onNavigation(this)" name="tab2")
+                    span(slot="jrg-tab-content") Simple Tab 2
         script(src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.1.0/mustache.js")
-        script(type="module" src="https://cdn.jsdelivr.net/npm/xstate@4.7.6/dist/xstate.web.js")
+        script(src="/xstate/fsm/dist/xstate.fsm.js")
+        // script(type="module" src="https://cdn.jsdelivr.net/npm/xstate@4.7.6/dist/xstate.web.js")
         script(type="module" src="/jrg/core/dist/index.mjs")
         script(type="module" src="/jrg/button/dist/index.mjs")
+        script(type="module" src="/jrg/icon/dist/index.mjs")
+        script(type="module" src="/jrg/tabs/dist/index.mjs")
+        script(type="module" src="/ui/index.mjs")

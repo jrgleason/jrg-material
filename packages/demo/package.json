@@ -9,10 +9,13 @@
     "start": "node --experimental-modules src/server.mjs"
   },
   "author": "Jackie Gleason",
-  "license": "Apache-2.0",
+  "license": "MIT",
   "dependencies": {
     "@jrg-material/button": "latest",
     "@jrg-material/core": "latest",
+    "@jrg-material/icon": "latest",
+    "@jrg-material/tabs": "latest",
+    "@xstate/fsm": "latest",
     "koa": "latest",
     "koa-mount": "latest",
     "koa-pug": "latest",

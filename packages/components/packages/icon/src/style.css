@@ -1,27 +1,3 @@
-.jrg-icon-button{
-    display: inline-block;
-    position: relative;
-    box-sizing: border-box;
-    background-color: transparent;
-    fill: currentcolor;
-    color: inherit;
-    font-size: 24px;
-    cursor: pointer;
-    user-select: none;
-    width: 48px;
-    height: 48px;
-    border-width: initial;
-    border-style: none;
-    border-color: initial;
-    border-image: initial;
-    outline: none;
-    text-decoration: none;
-    padding: 12px;
-    border-radius:50%;
-}
-.jrg-icon-button:hover{
-    background-color: grey;
-}
 .jrg-material-icon{
     font-family: "Material Icons";
     font-weight: normal;
@@ -38,4 +14,9 @@
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizelegibility;
     font-feature-settings: "liga";
+}
+.jrg-material-icon:after{
+    {{#icon}}
+    content: "{{icon}}"
+    {{/icon}}
 }

@@ -30,6 +30,7 @@ app
   .use(mount('/resume', resume))
   .use(mount('/ui', serve(`${__dirname}/ui`)))
   .use(mount('/css', serve(`${__dirname}/css`)))
+  .use(mount('/xstate', serve(`${__dirname}/../node_modules/@xstate`)))
   .use(mount('/jrg', serve(`${__dirname}/../node_modules/@jrg-material`)));
 
 let server = app;

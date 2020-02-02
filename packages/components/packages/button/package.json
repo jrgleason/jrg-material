@@ -1,6 +1,6 @@
 {
   "name": "@jrg-material/button",
-  "version": "0.0.4",
+  "version": "0.0.16",
   "description": "",
   "browser": "dist/index.umd.js",
   "main": "dist/index.mjs",
@@ -14,9 +14,8 @@
     "upload": "npm publish --access public && npm version patch"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "dependencies": {
-    "@jrg-material/theme": "latest",
-    "@jrg-material/core": "latest"
+    "@jrg-material/theme": "latest"
   }
 }
