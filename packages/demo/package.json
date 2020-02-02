@@ -9,7 +9,7 @@
     "start": "node --experimental-modules src/server.mjs"
   },
   "author": "Jackie Gleason",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "dependencies": {
     "@jrg-material/button": "latest",
     "@jrg-material/core": "latest",

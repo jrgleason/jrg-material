@@ -11,7 +11,7 @@
     "lint": "lerna run lint"
   },
   "author": "Jackie Gleason",
-  "license": "MIT",
+  "license": "Apache-2.0",
   "devDependencies": {
     "@jrg-material/build": "latest",
     "jsdoc": "latest",

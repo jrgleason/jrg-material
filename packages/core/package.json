@@ -13,5 +13,5 @@
     "upload": "npm publish --access public && npm version patch"
   },
   "author": "Jackie Gleason",
-  "license": "MIT"
+  "license": "Apache-2.0"
 }
