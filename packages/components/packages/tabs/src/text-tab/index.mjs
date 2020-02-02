@@ -1,5 +1,8 @@
 import {Tab} from "../tab/index.mjs";
 
+/**
+* This is a Text Tab
+*/
 export class TextTab extends Tab{
     constructor(name, text){
         super(name);
