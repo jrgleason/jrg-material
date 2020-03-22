@@ -1,4 +1,5 @@
 import {TextTab, IconTab} from "/jrg/tabs/dist/index.mjs";
+import { Markdown } from "/jrg/markdown/dist/index.mjs"
 
 const Tabs = [
     {
@@ -46,6 +47,8 @@ class DemoApplication{
         this.currentState = this.machine.initialState;
         this.tabElement = document.getElementById("jrg-navigation-tabs");
         this.renderTabs(this.currentState.value);
+        const md = new Markdown("## This is the markdown message\n\n**Just please translate**\n\n    This should be code\n\n    class Export {}");
+        document.getElementById("jrg-markdown").appendChild(md);
     }
     renderTabs(name){
         this.tabElement.innerHTML = "";

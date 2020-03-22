@@ -7,7 +7,7 @@
   "scripts": {
     "lint": "eslint src --fix --ext mjs",
     "clean": "rm -rf dist",
-    "build": "npm install && rollup -c && npm prune --production",
+    "build": "npm install && rollup -c rollup.config.mjs && npm prune --production",
     "publish:patch": "npm run build && npm publish --access public && npm version patch",
     "upload": "npm publish --access public && npm version patch"
   },

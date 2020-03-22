@@ -39,7 +39,7 @@ export class Base extends HTMLElement {
   renderStyle(name){
     const style = this.styles[name];
     const element = document.createElement('style');
-    if(!style){
+    if(style == null){
         console.error(`Style was not found ${name}`);
         return;
     }

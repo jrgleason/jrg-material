@@ -14,6 +14,8 @@ html
                 div(slot="jrg-button-label") contained
             jrg-button(base-color="green" border="false")
                 div(slot="jrg-button-label") text
+            jrg-mdc-button(base-color="green" border="false")
+                div(slot="jrg-button-label") text
             jrg-tabs(id="jrg-navigation-tabs")
             jrg-tabs
                 jrg-tab(slot="jrg-tabs-item" onclick="App.onNavigation(this)" name="tab1")
@@ -21,9 +23,10 @@ html
                     div(slot="jrg-tab-content") Ok
                 jrg-tab(slot="jrg-tabs-item" onclick="App.onNavigation(this)" name="tab2")
                     span(slot="jrg-tab-content") Simple Tab 2
-        block content
+            block content
         script(src="https://cdnjs.cloudflare.com/ajax/libs/mustache.js/3.1.0/mustache.js")
         script(src="/xstate/fsm/dist/xstate.fsm.js")
+        script(src="/showdown/dist/showdown.js")
         // script(type="module" src="https://cdn.jsdelivr.net/npm/xstate@4.7.6/dist/xstate.web.js")
         script(type="module" src="/jrg/core/dist/index.mjs")
         script(type="module" src="/jrg/button/dist/index.mjs")

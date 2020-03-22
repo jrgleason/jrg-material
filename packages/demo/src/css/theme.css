@@ -1,11 +1,6 @@
 html, body, .content{
   margin: 0;
-  height: 100%;
-  width: 100%;
-  overflow: hidden;
-}
-.content{
-  display: flex;
+  overflow:auto;
 }
 jrg-viewport.left{
   width: 200px;
@@ -58,4 +53,8 @@ jrg-header{
 }
 .jrg-other{
   color: white;
+}
+
+jrg-tabs:not(:defined),jrg-button:not(:defined) {
+  display:none
 }

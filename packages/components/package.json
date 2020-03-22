@@ -14,12 +14,14 @@
   "license": "Apache-2.0",
   "devDependencies": {
     "@jrg-material/build": "latest",
+    "@rollup/plugin-commonjs": "latest",
+    "@rollup/plugin-node-resolve": "latest",
+    "autoprefixer": "latest",
     "jsdoc": "latest",
     "jsdoc-md": "latest",
     "lerna": "latest",
     "rollup": "latest",
-    "@rollup/plugin-node-resolve": "latest",
-    "@rollup/plugin-commonjs": "latest",
+    "rollup-plugin-postcss": "latest",
     "rollup-plugin-string": "latest"
   }
 }

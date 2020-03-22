@@ -1,0 +1,15 @@
+{
+  "name": "@jrg-material/markdown",
+  "version": "0.0.12",
+  "description": "A simple mardown component I can use for blog posts",
+  "browser": "dist/index.umd.js",
+  "main": "dist/index.mjs",
+  "src": "src/index.mjs",
+  "scripts": {
+    "build": "npm install && rollup -c rollup.config.mjs && npm prune --production",
+    "upload": "npm publish --access public && npm version patch",
+    "publish:patch": "npm run build && npm run upload"
+  },
+  "author": "Jackie Gleason",
+  "license": "MIT"
+}
