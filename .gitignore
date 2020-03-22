@@ -105,4 +105,4 @@ dist
 .tern-port
 
 # NodeJS stuff
-# package-lock.json
+package-lock.json
