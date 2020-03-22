@@ -14,6 +14,7 @@
     "@jrg-material/button": "latest",
     "@jrg-material/core": "latest",
     "@jrg-material/icon": "latest",
+    "@jrg-material/markdown": "latest",
     "@jrg-material/tabs": "latest",
     "@xstate/fsm": "latest",
     "koa": "latest",
@@ -21,6 +22,7 @@
     "koa-pug": "latest",
     "koa-router": "latest",
     "koa-static": "latest",
-    "pug": "latest"
+    "pug": "latest",
+    "showdown": "^1.9.1"
   }
 }
