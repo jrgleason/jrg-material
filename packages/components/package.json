@@ -6,7 +6,7 @@
   "scripts": {
     "build": "lerna run build",
     "bootstrap": "lerna bootstrap",
-    "clean": "lerna clean -y || lerna run clean",
+    "clean": "lerna clean -y && lerna run clean",
     "publish:patch": "lerna run publish:patch",
     "lint": "lerna run lint"
   },
@@ -16,12 +16,11 @@
     "@jrg-material/build": "latest",
     "@rollup/plugin-commonjs": "latest",
     "@rollup/plugin-node-resolve": "latest",
-    "autoprefixer": "latest",
+    "@jrg/rollup-sass-shadow": "latest",
     "jsdoc": "latest",
     "jsdoc-md": "latest",
     "lerna": "latest",
     "rollup": "latest",
-    "rollup-plugin-postcss": "latest",
     "rollup-plugin-string": "latest"
   }
 }

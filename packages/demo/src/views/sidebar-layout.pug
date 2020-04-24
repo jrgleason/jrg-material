@@ -4,12 +4,21 @@ html
         link(rel="stylesheet", href="/css/theme.css")
     body
         .content
-            jrg-button(base-color="purple")
-                div(slot="jrg-button-label") Welcome
-            jrg-icon(icon="add")
-            jrg-button(base-color="green")
-                jrg-icon(icon="menu" slot="jrg-button-icon")
-                div(slot="jrg-button-label") This is a icon button
+            h1 Icon
+                h2 regular
+                    jrg-icon
+                h2 Change Icon
+                    jrg-icon(icon="add")
+            h1 Button
+                h2 Regular
+                    jrg-button
+                h2 With Label
+                    jrg-button(base-color="purple")
+                        div(slot="jrg-button-label") Welcome
+                h2 With Icon & label
+                    jrg-button(base-color="green")
+                        jrg-icon(icon="menu" slot="jrg-button-icon")
+                        div(slot="jrg-button-label") This is a icon button
             jrg-button(base-color="red" contained="true")
                 div(slot="jrg-button-label") contained
             jrg-button(base-color="green" border="false")

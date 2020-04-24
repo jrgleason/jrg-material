@@ -1,20 +1,11 @@
-import resolve from '@rollup/plugin-node-resolve';
-import {string} from 'rollup-plugin-string';
-
-import {getMJS, getUMD} from "../../node_modules/@jrg-material/build/dist/index.mjs"
-
+import {JRGBuild} from '@jrg-material/build'
 import pkg from './package.json';
+import path from 'path';
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
-const mjs = getMJS(pkg);
-mjs.plugins = [
-  string({include: '**/*.(html|css|svg)'}),
-  resolve({
-    extensions: ['.css']
-  })
-]
-const umd = getUMD(pkg);
+const build = new JRGBuild(pkg, __dirname)
 
 export default [
-    umd,
-    mjs
-]
+    build.umd,
+    build.mjs
+];

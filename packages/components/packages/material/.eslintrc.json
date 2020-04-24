@@ -1,0 +1,18 @@
+{
+  "extends": ["eslint:recommended", "google"],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "rules": {
+    "require-jsdoc": 1,
+    "semi": "error"
+  },
+  "env": {
+    "es6": true,
+    "browser": true
+  },
+  "globals": {
+    "Promise": "readonly"
+  }
+}

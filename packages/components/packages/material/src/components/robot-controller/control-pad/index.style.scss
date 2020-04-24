@@ -1,0 +1,33 @@
+@use "variables";
+
+::slotted( div[slot="todo"] ) {
+    background-color: darkgrey;
+    color: white;
+}
+.jrg-control-panel{
+    display: flex;
+    flex-direction: column;
+    // TODO: Make these variables
+    padding: 3px 8px;
+    width: 100%;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+}
+.row{
+    display: flex;
+    padding: variables.$btn-row-pad;
+    box-sizing: border-box;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+.jrg-left-right{
+    display:flex;
+    .left{
+        padding-right: 12px;
+    }
+    .right{
+        padding-left: 12px;
+    }
+}

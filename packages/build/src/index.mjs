@@ -1,60 +1,61 @@
 import commonjs from '@rollup/plugin-commonjs';
 import resolve from '@rollup/plugin-node-resolve';
-import {string} from 'rollup-plugin-string';
+import rollupString from 'rollup-plugin-string';
+import SassShadow from '@jrg/rollup-sass-shadow';
 
-const myString = string({
-  include: '**/*.(html|css|svg)',
-});
+export class JRGBuild {
+  constructor(pkg, __dirname) {
+    this.pkg = pkg;
+    this.shadow = new SassShadow(__dirname);
+    this.string = rollupString.string({
+      include: '**/*.(html|css|svg)',
+    });
+    this.basePlugins = [
+      this.string,
+      this.shadow.plugin,
+    ];
+  }
+  get mjs() {
+    return {
+      input: this.pkg.src,
+      plugins: this.basePlugins,
+      external: ['ms'],
+      output: [
+        {
+          file: this.pkg.main,
+          format: 'esm',
+        },
+      ],
+    };
+  }
+  get umd() {
+    const plugins = this.basePlugins.concat([resolve()]);
+    return {
+      input: this.pkg.src,
+      plugins: plugins,
+      external: ['ms'],
+      output: [
+        {
+          name: 'jackiergleason',
+          file: this.pkg.browser,
+          format: 'umd',
+        },
+      ],
+    };
+  }
 
-const getMJS = function(pkg, plugins) {
-  plugins = plugins || [];
-  plugins.push(myString);
-  return {
-    input: pkg.src,
-    plugins: plugins,
-    external: ['ms'],
-    output: [
-      {
-        file: pkg.main,
-        format: 'esm',
-      },
-    ],
-  };
-};
-const getCJS = function(pkg, plugins) {
-  plugins = plugins || [
-    myString,
-    commonjs(),
-  ];
-  return {
-    input: pkg.src,
-    plugins: plugins,
-    external: ['ms'],
-    output: [
-      {
-        file: pkg.cjs,
-        format: 'cjs',
-      },
-    ],
-  };
-};
-const getUMD = function(pkg, plugins) {
-  plugins = plugins || [
-    myString,
-    resolve(),
-  ];
-  return {
-    input: pkg.src,
-    plugins: plugins,
-    external: ['ms'],
-    output: [
-      {
-        name: 'jackiergleason',
-        file: pkg.browser,
-        format: 'umd',
-      },
-    ],
-  };
-};
-
-export {getCJS, getMJS, getUMD};
+  get cjs() {
+    const plugins = this.basePlugins.concat([commonjs()]);
+    return {
+      input: this.pkg.src,
+      plugins: plugins,
+      external: ['ms'],
+      output: [
+        {
+          file: this.pkg.cjs,
+          format: 'cjs',
+        },
+      ],
+    };
+  }
+}

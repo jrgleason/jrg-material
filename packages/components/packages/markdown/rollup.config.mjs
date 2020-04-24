@@ -1,30 +1,11 @@
-import postcss from 'rollup-plugin-postcss';
-import autoprefixer from 'autoprefixer';
-import path from 'path';
-import {getMJS, getUMD} from "../../node_modules/@jrg-material/build/dist/index.mjs";
-
+import {JRGBuild} from '@jrg-material/build'
 import pkg from './package.json';
+import path from 'path';
+const __dirname = path.dirname(new URL(import.meta.url).pathname);
 
-const pcss = postcss({
-    extensions: ['.sass', '.scss'],
-    plugins: [
-        autoprefixer
-    ],
-    use: [
-        [
-            'sass', {
-                includePaths: [path.resolve('node_modules')]
-            }
-        ]
-    ]
-})
-
-const mjs = getMJS(pkg);
-mjs.plugins.push(pcss);
-const umd = getUMD(pkg);
-umd.plugins.push(pcss);
+const build = new JRGBuild(pkg, __dirname)
 
 export default [
-    umd,
-    mjs
-]
+    build.umd,
+    build.mjs
+];

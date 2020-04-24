@@ -8,13 +8,23 @@
   "scripts": {
     "lint": "eslint src --fix --ext mjs",
     "clean": "rm -rf dist",
-    "build": "npm install && rollup -c rollup.config.mjs && npm prune --production",
-    "build:local": "../../node_modules/.bin/rollup -c",
+    "build": "node --experimental-json-modules ./node_modules/.bin/rollup -c rollup.config.mjs",
     "publish:patch": "npm run build && npm publish --access public && npm version patch",
     "upload": "npm publish --access public && npm version patch"
   },
   "dependencies": {
     "@jrg-material/theme": "latest"
+  },
+  "devDependencies": {
+    "@jrg-material/build": "latest",
+    "@rollup/plugin-commonjs": "latest",
+    "@rollup/plugin-node-resolve": "latest",
+    "@jrg/rollup-sass-shadow": "latest",
+    "jsdoc": "latest",
+    "jsdoc-md": "latest",
+    "lerna": "latest",
+    "rollup": "latest",
+    "rollup-plugin-string": "latest"
   },
   "author": "",
   "license": "MIT"
