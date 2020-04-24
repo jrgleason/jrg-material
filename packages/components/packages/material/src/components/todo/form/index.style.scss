@@ -1,0 +1,18 @@
+::slotted( div[slot="todo"] ) {
+    background-color: darkgrey;
+    color: white;
+}
+.jrg-todo-form{
+    display: flex;
+    flex-direction: column;
+    // TODO: Make these variables
+    padding: 3px 8px;
+    width: calc( 100% - 16px );
+}
+.row{
+    display: flex;
+    padding: 4px;
+}
+.row mwc-textfield{
+    width: 100%;
+}

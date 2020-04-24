@@ -11,7 +11,7 @@
   "author": "Jackie Gleason",
   "license": "Apache-2.0",
   "dependencies": {
-    "@jrg-material/button": "../components/packages/button",
+    "@jrg-material/button": "latest",
     "@jrg-material/core": "latest",
     "@jrg-material/icon": "latest",
     "@jrg-material/markdown": "latest",

@@ -1,0 +1,12 @@
+{
+  "name": "@jrg-material/shadow",
+  "version": "0.0.2",
+  "description": "A simple mardown component I can use for blog posts",
+  "main": "index.mjs",
+  "scripts": {},
+  "author": "Jackie Gleason",
+  "devDependencies": {
+    "eslint": "latest",
+    "eslint-config-google": "latest"
+  }
+}

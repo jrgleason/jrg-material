@@ -16,6 +16,17 @@
   "dependencies": {
     "@jrg-material/theme": "latest"
   },
+  "devDependencies": {
+    "@jrg-material/build": "latest",
+    "@rollup/plugin-commonjs": "latest",
+    "@rollup/plugin-node-resolve": "latest",
+    "@jrg/rollup-sass-shadow": "latest",
+    "jsdoc": "latest",
+    "jsdoc-md": "latest",
+    "lerna": "latest",
+    "rollup": "latest",
+    "rollup-plugin-string": "latest"
+  },
   "author": "",
   "license": "MIT"
 }

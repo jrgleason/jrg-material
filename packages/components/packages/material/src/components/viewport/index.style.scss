@@ -1,0 +1,8 @@
+@use "@material/top-app-bar/variables" as top-bar;
+:host{
+    width: 100%;
+    overflow: auto;
+    height: calc( 100% - #{top-bar.$row-height} );
+    display: inline-block;
+    background-color:lightblue;
+}

@@ -1,6 +1,6 @@
 {
   "name": "@jrg-material/button",
-  "version": "0.0.21",
+  "version": "0.0.34",
   "description": "",
   "browser": "dist/index.umd.js",
   "main": "dist/index.mjs",
@@ -8,16 +8,26 @@
   "scripts": {
     "lint": "eslint src --fix --ext mjs",
     "clean": "rm -rf dist",
-    "build": "npm install && rollup -c rollup.config.mjs && npm prune --production",
-    "build:local": "../../node_modules/.bin/rollup -c",
-    "publish:patch": "npm run build && npm publish --access public && npm version patch",
-    "upload": "npm publish --access public && npm version patch"
+    "build:full": "npm run clean && npm install && npm run build && npm prune --production",
+    "build": "node --experimental-json-modules ./node_modules/.bin/rollup -c rollup.config.mjs",
+    "upload": "npm publish && npm version patch"
   },
   "author": "",
   "license": "MIT",
   "dependencies": {
     "@jrg-material/theme": "latest",
     "@material/button": "latest",
-    "@material/theme": "^4.0.0"
+    "@material/theme": "latest"
+  },
+  "devDependencies": {
+    "@jrg-material/build": "latest",
+    "@rollup/plugin-commonjs": "latest",
+    "@rollup/plugin-node-resolve": "latest",
+    "@jrg/rollup-sass-shadow": "latest",
+    "jsdoc": "latest",
+    "jsdoc-md": "latest",
+    "lerna": "latest",
+    "rollup": "latest",
+    "rollup-plugin-string": "latest"
   }
 }

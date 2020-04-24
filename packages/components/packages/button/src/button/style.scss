@@ -1,5 +1,6 @@
 :host *{
     font-size: 0.9em;
+    --background-color: rgba(144, 202, 249, 0.5);
 }
 button{
     background: none;
@@ -18,7 +19,7 @@ button:hover .jrg-button-background{
     z-index: 0;
     position: absolute;
     top: 0;
-    background-color: {{baseColor}};
+    background-color: var(--background-color);
     opacity: 0.1;
 }
 
@@ -28,7 +29,7 @@ button:hover .jrg-button-background{
     justify-content: center;
     margin: 5px 15px;
     font-weight: 500;
-    color: {{baseColor}};
+    color: var(--background-color);
     z-index: 1;
     text-transform: uppercase;
     letter-spacing: 0.08em;
@@ -45,17 +46,19 @@ slot{
     display:flex;
 }
 
-{{#outlined}}
-button{
-    border: 1px solid {{baseColor}};
+.outlined button{
+    border: 1px solid var(--background-color);
     border-radius: 4px;
 }
-{{/outlined}}
-{{#contained}}
-.jrg-button-background{
+
+.contained .jrg-button-background{
   opacity: 1;
 }
+
+slot{
+    height: 100%;
+}
+
 ::slotted(*[slot="jrg-button-label"]){
   color: white;
 }
-{{/contained}}

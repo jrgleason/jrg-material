@@ -1,0 +1,40 @@
+{
+	"name": "@jrg-material/material",
+	"version": "0.0.1",
+	"description": "",
+	"main": "dist/index.mjs",
+	"src": "src/index.mjs",
+	"browser": "dist/index.umd.js",
+	"scripts": {
+		"rollup": "node --experimental-json-modules ./node_modules/.bin/rollup --config rollup.config.mjs",
+		"build": "npm run rollup",
+		"lint": "eslint src --fix --ext mjs",
+		"clean:all": "rm -rf dist",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"author": "Jackie Gleason",
+	"license": "ISC",
+	"dependencies": {
+		"@material/layout-grid": "latest",
+		"@material/mwc-button": "latest",
+		"@material/mwc-formfield": "latest",
+		"@material/mwc-icon-button": "latest",
+		"@material/mwc-textfield": "latest",
+		"@material/mwc-top-app-bar-fixed": "latest",
+		"@material/theme": "latest",
+		"@material/mwc-checkbox": "latest"
+	},
+	"devDependencies": {
+		"eslint": "latest",
+		"mkdirp": "1.0.3",
+		"eslint-config-google": "latest",
+		"rollup": "latest",
+		"rollup-plugin-eslint": "latest",
+		"rollup-plugin-lit-html": "latest",
+		"rollup-plugin-pug": "latest",
+		"rollup-plugin-terser": "latest",
+		"@jrg/rollup-sass-shadow": "latest",
+		"@rollup/plugin-node-resolve": "latest",
+		"autoprefixer": "latest"
+	}
+}

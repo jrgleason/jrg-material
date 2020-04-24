@@ -1,38 +1,29 @@
 import template from './template.html';
 import style from './style.css';
 
+if(!Base) console.error(
+    'The base library was not found. Please run npm install --save @jrg-material/core'
+);
+
 /**
 * This is a simple icon
 * @example
 * <jrg-icon icon="search"></jrg-icon>
 */
 export class Icon extends Base {
-    constructor(icon) {
+    constructor() {
         super();
         this.template = template;
-        this.default = icon || 'home';
         this.addStyle(style);
     }
-
     static get observedAttributes() {
-        return ['icon'];
+        return ['icon', 'base-color'];
     }
-
-    attributeChangedCallback(){
-        console.log('Attribute callback test. in icon');
-        super.render();
+    get baseColor(){
+        return this.getAttribute('base-color') || "lightsgrey";
     }
-
     get icon(){
-        return this.getAttribute('icon') || this.default;
-    }
-
-    connectedCallback() {
-        this.baseColor = this.getAttribute('base-color') || "lightsgrey";
-        super.connectedCallback();
+        return this.getAttribute('icon') || 'home';
     }
 }
-
-
-customElements.get('jrg-icon') ||
-  customElements.define('jrg-icon', Icon, {});
+Base.CREATE_ELEMENT('jrg-icon', Icon);
