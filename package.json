@@ -26,6 +26,7 @@
     "jsdoc-md": "latest",
     "lerna": "latest",
     "rollup": "latest",
+    "minimist": "latest",
     "rollup-plugin-string": "latest"
   }
 }
