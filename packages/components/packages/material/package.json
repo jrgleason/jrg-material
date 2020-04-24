@@ -7,9 +7,9 @@
 	"browser": "dist/index.umd.js",
 	"scripts": {
 		"rollup": "node --experimental-json-modules ./node_modules/.bin/rollup --config rollup.config.mjs",
-		"build": "npm run rollup",
+		"build": "node --experimental-json-modules ./node_modules/.bin/rollup --config rollup.config.mjs",
 		"lint": "eslint src --fix --ext mjs",
-		"clean:all": "rm -rf dist",
+		"clean": "rm -rf dist",
 		"test": "echo \"Error: no test specified\" && exit 1"
 	},
 	"author": "Jackie Gleason",

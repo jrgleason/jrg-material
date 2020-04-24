@@ -6,7 +6,7 @@
   "scripts": {
     "build": "lerna run build",
     "bootstrap": "lerna bootstrap",
-    "clean": "lerna clean -y || lerna run clean",
+    "clean": "lerna clean -y && lerna run clean",
     "publish:patch": "lerna run publish:patch",
     "lint": "lerna run lint"
   },

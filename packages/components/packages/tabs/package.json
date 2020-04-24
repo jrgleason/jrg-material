@@ -8,8 +8,7 @@
   "scripts": {
     "lint": "eslint src --fix --ext mjs",
     "clean": "rm -rf dist",
-    "build": "npm install && rollup -c rollup.config.mjs && npm prune --production",
-    "build:local": "../../node_modules/.bin/rollup -c",
+    "build": "node --experimental-json-modules ./node_modules/.bin/rollup -c rollup.config.mjs",
     "publish:patch": "npm run build && npm publish --access public && npm version patch",
     "upload": "npm publish --access public && npm version patch"
   },
