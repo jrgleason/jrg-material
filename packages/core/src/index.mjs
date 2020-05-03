@@ -1,9 +1,9 @@
 import { Base } from './Base.mjs';
 import { ShadowElement } from './ShadowElement.mjs';
 // Add Mustache Globally
-if(!Mustache){
+if(typeof Mustache !== 'undefined'){
   console.error("Mustache not found, templates not supported");
-  Mustache = {
+  window.Mustache = {
      render: (template) => template
   }
 }
