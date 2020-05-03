@@ -1,5 +1,5 @@
-import { Base } from 'Base.mjs';
-import { ShadowElement } from 'ShadowElement';
+import { Base } from './Base.mjs';
+import { ShadowElement } from './ShadowElement.mjs';
 // Add Mustache Globally
 if(!Mustache){
   console.error("Mustache not found, templates not supported");

@@ -1,9 +1,10 @@
 {
   "name": "@jrg-material/core",
-  "version": "0.0.7",
+  "version": "0.0.10",
   "description": "",
   "main": "dist/index.mjs",
   "src": "src/index.mjs",
+  "browser": "dist/index.umd.js",
   "scripts": {
     "build": "node --experimental-json-modules ./node_modules/.bin/rollup --config rollup.config.mjs",
     "run-doc": "jsdoc --debug ./src/jrg-base-element.mjs -c ./jsdoc.conf.json",
